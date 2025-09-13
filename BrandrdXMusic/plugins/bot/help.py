@@ -37,7 +37,7 @@ async def helper_private(
         language = await get_lang(update.chat.id)
         _ = get_string(language)
         keyboard = help_pannel(_)
-        
+
         await update.reply_video(
             video="https://graph.org/file/84d30d4fd04570c0e0256.mp4",
             caption=_["help_1"].format(SUPPORT_CHAT), reply_markup=keyboard)
@@ -88,4 +88,3 @@ async def helper_cb(client, CallbackQuery, _):
         await CallbackQuery.edit_message_text(helpers.HELP_14, reply_markup=keyboard)
     elif cb == "hb15":
         await CallbackQuery.edit_message_text(helpers.HELP_15, reply_markup=keyboard)
-  
